@@ -17,20 +17,20 @@
 // Input: strs = ["a"]
 // Output: [["a"]]
 
-var groupAnagrams = function(strs) {
+var groupAnagrams = function (strs) {
   let grouped = {};
-for (let i = 0; i < strs.length; i++) {
- const word = strs[i];
- const key = word.split("").sort().join("");
- if (!grouped[key]) {
-   grouped[key] = [];
- }
- grouped[key].push(word);
-}
-// console.log(Object.values(grouped))
-return Object.values(grouped)
+  for (let i = 0; i < strs.length; i++) {
+    const word = strs[i];
+    const key = word.split("").sort().join("");
+    if (!grouped[key]) {
+      grouped[key] = [];
+    }
+    grouped[key].push(word);
+  }
+  // console.log(Object.values(grouped))
+  return Object.values(grouped)
 
 };
 
-groupAnagrams(["eat","tea","tan","ate","nat","bat"])
+groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
 
