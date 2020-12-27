@@ -97,7 +97,10 @@
         }
     }
     // return Object.values(obj)
-    console.log(Object.values(obj))
+    // for(item in obj){
+    //     console.log(item)
+    // }
+    console.log(obj)
 }
 
 //helper function to calculate the mean
