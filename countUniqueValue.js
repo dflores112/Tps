@@ -1,19 +1,33 @@
+// function countUniqueValues(arr){
+//   if(arr.length === 0){
+//     console.log(0)
+//   }
+//   let lookup = {};
+//   for(var i = 0; i < arr.length; i++){
+//     let num = arr[i];
+//     if(!lookup[num]){
+//       lookup[num] = num
+//     }
+//   }
+//   let count = 0
+//   for(num in lookup){
+//     count++
+//   }
+//   console.log(count)
+// }
+
 function countUniqueValues(arr){
-  if(arr.length === 0){
+  if(arr.length === 0 ){
     console.log(0)
   }
-  let lookup = {};
-  for(var i = 0; i < arr.length; i++){
-    let num = arr[i];
-    if(!lookup[num]){
-      lookup[num] = num
+  var i = 0;
+  for(var j = 1; j < arr.length; j++){
+    if(arr[j] !== arr[i]){
+      i++
+    arr[i] = arr[j]
     }
   }
-  let count = 0
-  for(num in lookup){
-    count++
-  }
-  console.log(count)
+  console.log(i+1)
 }
 
 countUniqueValues([1,1,1,1,1,2])
